@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+* {
+    margin: 0; /* Estos margenes y paddings se aplicaran a todos los elementos html */
+    padding: 0;
+    font-family: 'Benne', serif; /* Se agrega la fuente para el menu de opciones desde fonts.google.com */
+}
+
+.header { /* Se conecta con la clase header del archivo HTML */
+    min-height: 23vh;
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+nav { /* Se modifica la posicion del logo */
+    display: flex;
+    padding: 1% 6%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav img { /* Se cambia el tamaño del logo */
+    object-fit: cover;
+    width: 120px;
+}
+
+hr{
+    width: 60%;
+    height: 1px;
+    border: none;
+}
+
+
+.nav-links { 
+    flex: 1; /* Hace que el menu de opciones ocupe todo el espacio en la fila */
+    text-align: center; /* Se alinea el texto hacia la derecha */
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block; /*  Hace que el menu de opciones se despliegue horizontalmente */
+    padding: 8px 12px; /* Se añade espacio vertical y horizontal entre las opciones de menu de opciones */
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: black; /* Se cambia el color de las letras de las opciones del menu de opciones  */
+    text-decoration: none;
+    font-size: 18px; /* Se cambia el tamaño de la funte del menu de opciones */
+}
+
+.nav-links ul li::after { /* Codigo para poner la linea cafe debajo de las opciones del menu de opciones */
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: brown;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after { /* Codigo para poner la linea cafe debajo de las opciones del menu de opciones */
+    width: 100%;
+}
+
+
+.Body1 { /* Se conecta con la clase header del archivo HTML */
+    min-height: 80vh;
+    width: 90%;
+    background-color: #7B2C2C;
+    padding: 5% 5%; /* se agrega el margen */
+    margin: auto;
+}
+
+.igm1{
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.parallax{
+    position: relative;
+    height: 1470px;
+    height: 800px;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.txpar{
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+
+
+
+.contenedor{
+    min-height: 40vh;
+    width: 100%;
+    background-color:#241C1C;
+}
+
+.text{
+    text-align: center;
+    justify-content: center;
+}
+
+.text h1{
+    margin-top: 35px;
+    color: white;
+}
+
+.products_body{
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 92vh;
+}
+
+.selft__contenedor {
+    position: relative;
+    align-items: center;
+}
+
+.selft__anterior,
+.selft__siguiente {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #fff;
+    opacity: 20%;
+}
+
+.selft__anterior:hover,
+.selft__siguiente:hover {
+    opacity: 100%;
+}
+
+.selft__anterior{
+    left: -30px;
+}
+
+.selft__siguiente{
+    right: -30px;
+}
+
+.selft__lista{
+    overflow: hidden;
+}
+
+
+
+.selft__elemento{
+    width: 450px;
+    height: 500px;
+    background: transparent;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 10px 10px;
+    transform: scale(0.93);
+    transition: box-shadow 0.5s, transform 0.5s;
+    z-index: 1000;
+}
+
+.selft__elemento:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgb(0,0,0,0.2);
+}
+
+.selft__elemento .container{
+    width: 100%;
+    height: 100%;
+}
+
+.selft__elemento .container .top{
+    height: 80%;
+    width: 100%;
+    background-size: 100%;
+}
+
+.selft__elemento .container .bottom{
+    width: 100%;
+    height: 20%;
+    transition: transform 0.5;
+}
+
+.selft__elemento .container .bottom .left{
+    height: 100%;
+    width: 100%;
+    background: #f4f4f4;
+    position: relative;
+    float: left;
+}
+
+.selft__elemento .container .bottom .left .details{
+    padding-left: 20px;
+    float: left;
+    width: calc(70% - 40px);
+}
+
+.selft__elemento .container .bottom .left .details .txt_products{
+    font-size: 25px;
+}
+
+.selft__elemento .container .bottom .left .buy{
+    float: right;
+    height: 100%;
+    background: #f1f1f1;
+    transition: background 0.5s;
+    border-left: solid thin rgb(0,0,0,0.1);
+}
+
+.selft__elemento .container .bottom .left .buy i{
+    font-size: 30px;
+    padding: 30px;
+    color: turquoise;
+    transition: transform 0.5s;
+}
+
+.selft__elemento .container .bottom .left .buy:hover i{
+    transform: rotate(360deg);
+}
+
+.selft__elemento .inside{
+    z-index: 9;
+    background: tomato;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    border-radius: 0px 0px 200px 200px;
+    transition: all 0.5s, border-radius 2s, top 1s;
+    overflow: hidden;
+}
+
+.selft__elemento .inside .icon{
+    position: absolute;
+    right: 85px;
+    top: 85px;
+    color: white;
+    opacity: 1;
+}
+
+.selft__elemento .inside:hover{
+    width: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    height: 80%;
+}
+
+.selft__elemento .inside:hover .icon{
+    opacity: 0;
+    right: 15px;
+    top: 15px;
+}
+
+.selft__elemento .inside:hover .contents{
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0);
+}
+
+.selft__elemento .inside .contents{
+    padding: 5%;
+    opacity: 0;
+    transform: scale(0.5);
+    transform: translateY(-200%);
+    transition: opacity 0.2, transform 0.8s;
+}
+
+.selft__elemento .inside .contents h1,
+.selft__elemento .inside .contents p{
+    color: white;
+}
+
+.selft__elemento .inside .contents p{
+    font-size: 19px;
+}
+
+.who{
+    min-height: 80vh;
+    width: 90%;
+    padding: 5% 5%; /* se agrega el margen */
+    margin: auto;
+    background-image: url("Imagenes/hambur.jpeg");
+}

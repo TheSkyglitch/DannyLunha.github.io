@@ -1,0 +1,189 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');*/
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Redressed&family=Ubuntu:wght@300&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=MonteCarlo&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Benne', serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    background-image: url("Images/Fondo.jpeg");
+    background-attachment: fixed;
+}
+
+.header {
+    /* Se conecta con la clase header del archivo HTML */
+    min-height: 23vh;
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+nav {
+    /* Se modifica la posicion del logo */
+    display: flex;
+    padding: 1% 6%;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 60%;
+    height: 1px;
+    border: none;
+}
+
+nav img {
+    /* Se cambia el tamaño del logo */
+    width: 120px;
+}
+
+.nav-links {
+    flex: 1;
+    /* Hace que el menu de opciones ocupe todo el espacio en la fila */
+    text-align: center;
+    /* Se alinea el texto hacia la derecha */
+    font-family: "HelveticaW01-Roman";
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    /*  Hace que el menu de opciones se despliegue horizontalmente */
+    padding: 8px 12px;
+    /* Se añade espacio vertical y horizontal entre las opciones de menu de opciones */
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: black;
+    /* Se cambia el color de las letras de las opciones del menu de opciones  */
+    text-decoration: none;
+    font-size: 18px;
+    /* Se cambia el tamaño de la funte del menu de opciones */
+}
+
+.nav-links ul li::after {
+    /* Codigo para poner la linea cafe debajo de las opciones del menu de opciones */
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: brown;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    /* Codigo para poner la linea cafe debajo de las opciones del menu de opciones */
+    width: 100%;
+}
+
+.text-box {
+    /* Se modifica las caracteristicas generales de todos los elementos dentro de la clase text box */
+    width: 80%;
+    color: rgb(146, 74, 52);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-box h1 {
+    /* Se modifica el tamaño del texto dentro del primer h1 */
+    font-family: 'Mulish', sans-serif;
+    /* Se modifica la fuente del primer h1 */
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+
+.text-box p {
+    /* linea depues del primer h1 */
+    font-family: 'Dancing Script', cursive;
+    /* Se agrega la fuente Dancing script */
+    margin: 35px 0 40px;
+    font-size: 20px;
+    color: black;
+}
+
+
+/* --------------------------------PRODUCTOS--------------------------------- */
+.firsttype{
+    text-align: center;
+    color: white;
+    background-color: black;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    font-family: 'MonteCarlo', cursive;
+}
+.container {
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.container .card {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: rgb(255, 255, 255);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+
+.container .card h3 {
+    color: rgb(184, 0, 0);
+}
+
+.container .card:hover {
+    height: 420px;
+}
+
+.container .card .imgBx {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .imgBx img {
+    width: 260px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
